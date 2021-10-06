@@ -15,6 +15,8 @@
 		80F8E130270E309C00186636 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80F8E12E270E309C00186636 /* LaunchScreen.storyboard */; };
 		80F8E13B270E321100186636 /* RandomStringsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8E13A270E321100186636 /* RandomStringsTableViewController.swift */; };
 		80F8E13E270E3B5600186636 /* RandomStringsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8E13D270E3B5600186636 /* RandomStringsGenerator.swift */; };
+		80F8E142270E3E6700186636 /* SomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8E141270E3E6700186636 /* SomeCollectionViewController.swift */; };
+		80F8E144270E421700186636 /* SomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8E143270E421700186636 /* SomeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		80F8E131270E309C00186636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80F8E13A270E321100186636 /* RandomStringsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomStringsTableViewController.swift; sourceTree = "<group>"; };
 		80F8E13D270E3B5600186636 /* RandomStringsGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomStringsGenerator.swift; sourceTree = "<group>"; };
+		80F8E141270E3E6700186636 /* SomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeCollectionViewController.swift; sourceTree = "<group>"; };
+		80F8E143270E421700186636 /* SomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 		80F8E138270E30CB00186636 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				80F8E140270E3E5000186636 /* Collection View */,
 				80F8E13C270E38A500186636 /* Main */,
 				80F8E139270E31FD00186636 /* Table View */,
 			);
@@ -103,6 +108,15 @@
 				80F8E127270E309A00186636 /* MainViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		80F8E140270E3E5000186636 /* Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				80F8E143270E421700186636 /* SomeCollectionViewCell.swift */,
+				80F8E141270E3E6700186636 /* SomeCollectionViewController.swift */,
+			);
+			path = "Collection View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +190,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80F8E142270E3E6700186636 /* SomeCollectionViewController.swift in Sources */,
+				80F8E144270E421700186636 /* SomeCollectionViewCell.swift in Sources */,
 				80F8E128270E309A00186636 /* MainViewController.swift in Sources */,
 				80F8E13E270E3B5600186636 /* RandomStringsGenerator.swift in Sources */,
 				80F8E124270E309A00186636 /* AppDelegate.swift in Sources */,
