@@ -1,9 +1,9 @@
 import UIKit
 
-class SomeCollectionViewCell: UICollectionViewCell {
+class NumbersCollectionViewHeader: UICollectionReusableView {
     // MARK: - Type Properties
 
-    static let cellIdentifier = "SomeCollectionViewCell"
+    static let reuseIdentifier = "NumbersCollectionViewHeader"
 
     // MARK: - Private Properties
 
@@ -14,20 +14,23 @@ class SomeCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
+        backgroundColor = .systemGray6
+
         label.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(label)
+        label.font = UIFont.boldSystemFont(ofSize: label.font.pointSize)
+        addSubview(label)
         NSLayoutConstraint.activate([
-            label.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            label.centerXAnchor.constraint(equalTo: centerXAnchor),
+            label.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: - Public Methods
-    
+
     func configure(with text: String) {
         label.text = text
     }

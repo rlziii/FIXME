@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
 
     @IBAction func collectionViewButtonTapped() {
         show(
-            SomeCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout()),
+            NumbersCollectionViewController(),
             sender: self
         )
     }

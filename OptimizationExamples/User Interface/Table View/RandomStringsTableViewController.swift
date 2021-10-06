@@ -4,15 +4,16 @@ class RandomStringsTableViewController: UITableViewController {
     // MARK: - Private Type Properties
 
     private static let cellIdentifier = "RandomStringsTableViewCellIdentifier"
+    private static let stringCount = 10_000
 
     // MARK: - Private Properties
 
-    private let randomStrings = RandomStringsGenerator.generate(count: 10_000)
+    private let randomStrings = RandomStringsGenerator.generate(count: stringCount)
 
     // MARK: - UITableViewDataSource Methods
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        randomStrings.count
+        Self.stringCount
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
