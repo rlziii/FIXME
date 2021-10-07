@@ -1,7 +1,7 @@
 import UIKit
 
 class NumbersCollectionViewHeader: UICollectionReusableView {
-    // MARK: - Type Properties
+    // MARK: - Public Type Properties
 
     static let reuseIdentifier = "NumbersCollectionViewHeader"
 

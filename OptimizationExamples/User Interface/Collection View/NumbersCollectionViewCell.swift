@@ -1,7 +1,7 @@
 import UIKit
 
 class NumbersCollectionViewCell: UICollectionViewCell {
-    // MARK: - Type Properties
+    // MARK: - Public Type Properties
 
     static let reuseIdentifier = "NumbersCollectionViewCell"
 

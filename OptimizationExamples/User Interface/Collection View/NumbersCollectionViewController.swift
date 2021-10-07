@@ -18,7 +18,7 @@ class NumbersCollectionViewController: UICollectionViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // MARK: - UITableView Methods
+    // MARK: - UIViewController Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,7 +1,7 @@
 import Foundation
 
-struct RandomStringsGenerator {
-    // MARK: - Type Methods
+enum RandomStringsGenerator {
+    // MARK: - Public Type Methods
 
     static func generate(count: Int) -> [String] {
         var randomStringArray = [String]()
