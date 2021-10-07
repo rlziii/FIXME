@@ -12,14 +12,12 @@ class MainViewController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
 
-        view.backgroundColor = .systemBackground
-
         tableViewButton.translatesAutoresizingMaskIntoConstraints = false
-        tableViewButton.setTitle("Table View", for: .normal)
+        tableViewButton.setTitle("Random Strings (Table View)", for: .normal)
         tableViewButton.addTarget(self, action: #selector(tableViewButtonTapped), for: .touchUpInside)
 
         collectionViewButton.translatesAutoresizingMaskIntoConstraints = false
-        collectionViewButton.setTitle("Collection View", for: .normal)
+        collectionViewButton.setTitle("Numbers (Collection View)", for: .normal)
         collectionViewButton.addTarget(self, action: #selector(collectionViewButtonTapped), for: .touchUpInside)
 
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -27,6 +25,7 @@ class MainViewController: UIViewController {
         stackView.addArrangedSubview(tableViewButton)
         stackView.addArrangedSubview(collectionViewButton)
 
+        view.backgroundColor = .systemBackground
         view.addSubview(stackView)
 
         NSLayoutConstraint.activate([
@@ -35,9 +34,7 @@ class MainViewController: UIViewController {
         ])
     }
 
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    required init?(coder: NSCoder) { fatalError() }
 
     // MARK: - UIViewController Methods
 
@@ -54,9 +51,6 @@ class MainViewController: UIViewController {
     }
 
     @objc private func collectionViewButtonTapped() {
-        show(
-            NumbersCollectionViewController(),
-            sender: self
-        )
+        show(NumbersCollectionViewController(), sender: self)
     }
 }

@@ -10,13 +10,15 @@ class RandomStringsTableViewController: UITableViewController {
 
     private let randomStrings = RandomStringsGenerator.generate(count: stringCount)
 
-    // MARK: - UIViewController Methods
+    // MARK: - Initialization
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    init() {
+        super.init(nibName: nil, bundle: nil)
 
         title = "Random Strings"
     }
+
+    required init?(coder: NSCoder) { fatalError() }
 
     // MARK: - UITableViewDataSource Methods
 
@@ -28,8 +30,13 @@ class RandomStringsTableViewController: UITableViewController {
         let randomStrings = randomStrings.sorted()
         let randomString = randomStrings[indexPath.row]
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: Self.cellIdentifier)
-            ?? UITableViewCell(style: .default, reuseIdentifier: Self.cellIdentifier)
+        let cell: UITableViewCell
+
+        if let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: Self.cellIdentifier) {
+            cell = dequeuedCell
+        } else {
+            cell = UITableViewCell(style: .default, reuseIdentifier: Self.cellIdentifier)
+        }
 
         cell.textLabel?.text = randomString
 

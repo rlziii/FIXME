@@ -82,20 +82,20 @@
 		80F8E138270E30CB00186636 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
-				80F8E140270E3E5000186636 /* Collection View */,
 				80F8E13C270E38A500186636 /* Main */,
-				80F8E139270E31FD00186636 /* Table View */,
+				80F8E140270E3E5000186636 /* Numbers (Collection View) */,
+				80F8E139270E31FD00186636 /* Random Strings (Table View) */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
 		};
-		80F8E139270E31FD00186636 /* Table View */ = {
+		80F8E139270E31FD00186636 /* Random Strings (Table View) */ = {
 			isa = PBXGroup;
 			children = (
 				80F8E13D270E3B5600186636 /* RandomStringsGenerator.swift */,
 				80F8E13A270E321100186636 /* RandomStringsTableViewController.swift */,
 			);
-			path = "Table View";
+			path = "Random Strings (Table View)";
 			sourceTree = "<group>";
 		};
 		80F8E13C270E38A500186636 /* Main */ = {
@@ -106,14 +106,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		80F8E140270E3E5000186636 /* Collection View */ = {
+		80F8E140270E3E5000186636 /* Numbers (Collection View) */ = {
 			isa = PBXGroup;
 			children = (
 				80F8E143270E421700186636 /* NumbersCollectionViewCell.swift */,
 				80F8E141270E3E6700186636 /* NumbersCollectionViewController.swift */,
 				80F8E145270E677A00186636 /* NumbersCollectionViewHeader.swift */,
 			);
-			path = "Collection View";
+			path = "Numbers (Collection View)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
