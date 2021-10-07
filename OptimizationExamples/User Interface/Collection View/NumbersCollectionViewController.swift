@@ -23,6 +23,8 @@ class NumbersCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Numbers"
+
         collectionView.register(
             NumbersCollectionViewCell.self,
             forCellWithReuseIdentifier: NumbersCollectionViewCell.reuseIdentifier

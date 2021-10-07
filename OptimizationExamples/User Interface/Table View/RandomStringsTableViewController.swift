@@ -10,6 +10,14 @@ class RandomStringsTableViewController: UITableViewController {
 
     private let randomStrings = RandomStringsGenerator.generate(count: stringCount)
 
+    // MARK: - UIViewController Methods
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        title = "Random Strings"
+    }
+
     // MARK: - UITableViewDataSource Methods
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
