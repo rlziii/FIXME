@@ -11,6 +11,7 @@
 		80CA731F27B1D3B800344B95 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CA731E27B1D3B800344B95 /* CounterViewController.swift */; };
 		80CA732127B1D3C300344B95 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CA732027B1D3C300344B95 /* CounterView.swift */; };
 		80CA732327B1D56B00344B95 /* RandomStringsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CA732227B1D56B00344B95 /* RandomStringsTableViewCell.swift */; };
+		80CA732527B1D73C00344B95 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CA732427B1D73C00344B95 /* Counter.swift */; };
 		80F8E124270E309A00186636 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8E123270E309A00186636 /* AppDelegate.swift */; };
 		80F8E126270E309A00186636 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8E125270E309A00186636 /* SceneDelegate.swift */; };
 		80F8E128270E309A00186636 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8E127270E309A00186636 /* MainViewController.swift */; };
@@ -27,6 +28,7 @@
 		80CA731E27B1D3B800344B95 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		80CA732027B1D3C300344B95 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		80CA732227B1D56B00344B95 /* RandomStringsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomStringsTableViewCell.swift; sourceTree = "<group>"; };
+		80CA732427B1D73C00344B95 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		80F8E120270E309A00186636 /* OptimizationExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptimizationExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F8E123270E309A00186636 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80F8E125270E309A00186636 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		80CA731C27B1D39B00344B95 /* Counter */ = {
 			isa = PBXGroup;
 			children = (
+				80CA732427B1D73C00344B95 /* Counter.swift */,
 				80CA732027B1D3C300344B95 /* CounterView.swift */,
 				80CA731E27B1D3B800344B95 /* CounterViewController.swift */,
 			);
@@ -207,6 +210,7 @@
 			files = (
 				80F8E142270E3E6700186636 /* NumbersCollectionViewController.swift in Sources */,
 				80CA731B27B1D37C00344B95 /* MainView.swift in Sources */,
+				80CA732527B1D73C00344B95 /* Counter.swift in Sources */,
 				80CA732327B1D56B00344B95 /* RandomStringsTableViewCell.swift in Sources */,
 				80F8E144270E421700186636 /* NumbersCollectionViewCell.swift in Sources */,
 				80F8E128270E309A00186636 /* MainViewController.swift in Sources */,

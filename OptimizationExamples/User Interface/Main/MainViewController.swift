@@ -4,6 +4,7 @@ class MainViewController: UIViewController {
     // MARK: - Private Properties
 
     private lazy var mainView = MainView(frame: .zero)
+    private let counter = Counter()
 
     // MARK: - UIViewController Methods
 
@@ -39,6 +40,6 @@ class MainViewController: UIViewController {
     }
 
     private func counterViewButtonTapped() {
-        show(CounterViewController(), sender: self)
+        show(CounterViewController(counter: counter), sender: self)
     }
 }

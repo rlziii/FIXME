@@ -3,11 +3,23 @@ import UIKit
 class CounterViewController: UIViewController {
     // MARK: - Private Properties
 
+    private let counter: Counter
     private lazy var counterView = CounterView(frame: .zero)
-    private var count = 0 {
-        didSet {
-            counterView.updateCounterLabel(with: count)
-        }
+
+    // MARK: - Initialization
+
+    init(counter: Counter) {
+        self.counter = counter
+
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) { fatalError() }
+
+    // MARK: - Deinitialization
+
+    deinit {
+        counter.reset()
     }
 
     // MARK: - UIViewController Methods
@@ -21,23 +33,22 @@ class CounterViewController: UIViewController {
 
         title = "Counter"
 
+        counterView.updateCounterLabel(with: counter.currentCount)
+
         counterView.setupButtonActions { action in
             switch action {
             case .minusButtonTapped:
-                self.minusButtonTapped()
+                self.updateCount(by: -1)
             case .plusButtonTapped:
-                self.plusButtonTapped()
+                self.updateCount(by: +1)
             }
         }
     }
 
     // MARK: - Private Methods
 
-    private func minusButtonTapped() {
-        count -= 1
-    }
-
-    private func plusButtonTapped() {
-        count += 1
+    private func updateCount(by amount: Int) {
+        counter.currentCount += amount
+        counterView.updateCounterLabel(with: counter.currentCount)
     }
 }
