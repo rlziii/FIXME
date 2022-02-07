@@ -23,7 +23,7 @@ class RandomStringsTableViewController: UITableViewController {
     // MARK: - UITableViewDataSource Methods
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        Self.stringCount
+        10_000
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
