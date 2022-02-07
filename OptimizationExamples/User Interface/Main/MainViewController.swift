@@ -3,54 +3,42 @@ import UIKit
 class MainViewController: UIViewController {
     // MARK: - Private Properties
 
-    private let tableViewButton = UIButton(type: .system)
-    private let collectionViewButton = UIButton(type: .system)
-    private let stackView = UIStackView(frame: .zero)
-
-    // MARK: - Initialization
-
-    init() {
-        super.init(nibName: nil, bundle: nil)
-
-        tableViewButton.translatesAutoresizingMaskIntoConstraints = false
-        tableViewButton.setTitle("Random Strings (Table View)", for: .normal)
-        tableViewButton.addTarget(self, action: #selector(tableViewButtonTapped), for: .touchUpInside)
-
-        collectionViewButton.translatesAutoresizingMaskIntoConstraints = false
-        collectionViewButton.setTitle("Numbers (Collection View)", for: .normal)
-        collectionViewButton.addTarget(self, action: #selector(collectionViewButtonTapped), for: .touchUpInside)
-
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.addArrangedSubview(tableViewButton)
-        stackView.addArrangedSubview(collectionViewButton)
-
-        view.backgroundColor = .systemBackground
-        view.addSubview(stackView)
-
-        NSLayoutConstraint.activate([
-            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
-    }
-
-    required init?(coder: NSCoder) { fatalError() }
+    private lazy var mainView = MainView(frame: .zero)
 
     // MARK: - UIViewController Methods
+
+    override func loadView() {
+        view = mainView
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Optimization Examples"
+
+        mainView.setupButtonActions { [weak self] action in
+            switch action {
+            case .tableViewButtonTapped:
+                self?.tableViewButtonTapped()
+            case .collectionViewButtonTapped:
+                self?.collectionViewButtonTapped()
+            case .counterViewButtonTapped:
+                self?.counterViewButtonTapped()
+            }
+        }
     }
 
     // MARK: - Private Methods
 
-    @objc private func tableViewButtonTapped() {
+    private func tableViewButtonTapped() {
         show(RandomStringsTableViewController(), sender: self)
     }
 
-    @objc private func collectionViewButtonTapped() {
+    private func collectionViewButtonTapped() {
         show(NumbersCollectionViewController(), sender: self)
+    }
+
+    private func counterViewButtonTapped() {
+        show(CounterViewController(), sender: self)
     }
 }

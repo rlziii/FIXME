@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80CA731B27B1D37C00344B95 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CA731A27B1D37C00344B95 /* MainView.swift */; };
+		80CA731F27B1D3B800344B95 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CA731E27B1D3B800344B95 /* CounterViewController.swift */; };
+		80CA732127B1D3C300344B95 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CA732027B1D3C300344B95 /* CounterView.swift */; };
+		80CA732327B1D56B00344B95 /* RandomStringsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CA732227B1D56B00344B95 /* RandomStringsTableViewCell.swift */; };
 		80F8E124270E309A00186636 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8E123270E309A00186636 /* AppDelegate.swift */; };
 		80F8E126270E309A00186636 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8E125270E309A00186636 /* SceneDelegate.swift */; };
 		80F8E128270E309A00186636 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8E127270E309A00186636 /* MainViewController.swift */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		80CA731A27B1D37C00344B95 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		80CA731E27B1D3B800344B95 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
+		80CA732027B1D3C300344B95 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		80CA732227B1D56B00344B95 /* RandomStringsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomStringsTableViewCell.swift; sourceTree = "<group>"; };
 		80F8E120270E309A00186636 /* OptimizationExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptimizationExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F8E123270E309A00186636 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80F8E125270E309A00186636 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80CA731C27B1D39B00344B95 /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				80CA732027B1D3C300344B95 /* CounterView.swift */,
+				80CA731E27B1D3B800344B95 /* CounterViewController.swift */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
 		80F8E117270E309A00186636 = {
 			isa = PBXGroup;
 			children = (
@@ -82,38 +99,41 @@
 		80F8E138270E30CB00186636 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				80CA731C27B1D39B00344B95 /* Counter */,
 				80F8E13C270E38A500186636 /* Main */,
-				80F8E140270E3E5000186636 /* Numbers (Collection View) */,
-				80F8E139270E31FD00186636 /* Random Strings (Table View) */,
+				80F8E140270E3E5000186636 /* Numbers */,
+				80F8E139270E31FD00186636 /* Random Strings */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
 		};
-		80F8E139270E31FD00186636 /* Random Strings (Table View) */ = {
+		80F8E139270E31FD00186636 /* Random Strings */ = {
 			isa = PBXGroup;
 			children = (
 				80F8E13D270E3B5600186636 /* RandomStringsGenerator.swift */,
+				80CA732227B1D56B00344B95 /* RandomStringsTableViewCell.swift */,
 				80F8E13A270E321100186636 /* RandomStringsTableViewController.swift */,
 			);
-			path = "Random Strings (Table View)";
+			path = "Random Strings";
 			sourceTree = "<group>";
 		};
 		80F8E13C270E38A500186636 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				80CA731A27B1D37C00344B95 /* MainView.swift */,
 				80F8E127270E309A00186636 /* MainViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		80F8E140270E3E5000186636 /* Numbers (Collection View) */ = {
+		80F8E140270E3E5000186636 /* Numbers */ = {
 			isa = PBXGroup;
 			children = (
 				80F8E143270E421700186636 /* NumbersCollectionViewCell.swift */,
 				80F8E141270E3E6700186636 /* NumbersCollectionViewController.swift */,
 				80F8E145270E677A00186636 /* NumbersCollectionViewHeader.swift */,
 			);
-			path = "Numbers (Collection View)";
+			path = Numbers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,9 +206,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				80F8E142270E3E6700186636 /* NumbersCollectionViewController.swift in Sources */,
+				80CA731B27B1D37C00344B95 /* MainView.swift in Sources */,
+				80CA732327B1D56B00344B95 /* RandomStringsTableViewCell.swift in Sources */,
 				80F8E144270E421700186636 /* NumbersCollectionViewCell.swift in Sources */,
 				80F8E128270E309A00186636 /* MainViewController.swift in Sources */,
 				80F8E13E270E3B5600186636 /* RandomStringsGenerator.swift in Sources */,
+				80CA731F27B1D3B800344B95 /* CounterViewController.swift in Sources */,
+				80CA732127B1D3C300344B95 /* CounterView.swift in Sources */,
 				80F8E124270E309A00186636 /* AppDelegate.swift in Sources */,
 				80F8E146270E677A00186636 /* NumbersCollectionViewHeader.swift in Sources */,
 				80F8E126270E309A00186636 /* SceneDelegate.swift in Sources */,

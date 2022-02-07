@@ -1,7 +1,11 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    // MARK: - Public Properties
+
     var window: UIWindow?
+
+    // MARK: - UIWindowSceneDelegate Methods
 
     func scene(
         _ scene: UIScene,
@@ -9,7 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         options connectionOptions: UIScene.ConnectionOptions
     ) {
         guard let windowScene = scene as? UIWindowScene else {
-            preconditionFailure("Could not convert UIScene to UIWindowScene in SceneDelegate.")
+            preconditionFailure("Could not cast \(UIScene.self) to \(UIWindowScene.self).")
         }
 
         window = UIWindow(windowScene: windowScene)
