@@ -27,33 +27,33 @@ class MainViewController: UIViewController {
 
         mainView.setupButtonActions { [unowned self] action in
             switch action {
-            case .tableViewButtonTapped:
-                tableViewButtonTapped()
-            case .collectionViewButtonTapped:
-                collectionViewButtonTapped()
-            case .counterViewButtonTapped:
-                counterViewButtonTapped()
-            case .randomEmojiViewButtonTapped:
-                randomEmojiViewButtonTapped()
+            case .randomStringsButtonTapped:
+                randomStringsButtonTapped()
+            case .numbersButtonTapped:
+                numbersButtonTapped()
+            case .counterButtonTapped:
+                counterButtonTapped()
+            case .randomEmojiButtonTapped:
+                randomEmojiButtonTapped()
             }
         }
     }
 
     // MARK: - Private Methods
 
-    private func tableViewButtonTapped() {
+    private func randomStringsButtonTapped() {
         show(RandomStringsTableViewController(), sender: self)
     }
 
-    private func collectionViewButtonTapped() {
+    private func numbersButtonTapped() {
         show(NumbersCollectionViewController(), sender: self)
     }
 
-    private func counterViewButtonTapped() {
+    private func counterButtonTapped() {
         show(CounterViewController(counter: counter), sender: self)
     }
 
-    private func randomEmojiViewButtonTapped() {
+    private func randomEmojiButtonTapped() {
         show(RandomEmojiViewController(), sender: self)
     }
 }

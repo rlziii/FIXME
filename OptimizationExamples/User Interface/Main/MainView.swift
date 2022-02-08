@@ -4,10 +4,6 @@ class MainView: UIView {
     // MARK: - Private Properties
 
     private let stackView = UIStackView(frame: .zero)
-    private let tableViewButton = UIButton(type: .system)
-    private let collectionViewButton = UIButton(type: .system)
-    private let counterViewButton = UIButton(type: .system)
-    private let randomEmojiViewButton = UIButton(type: .system)
 
     private var buttonActions: ((Action) -> Void)?
 
@@ -33,10 +29,7 @@ class MainView: UIView {
         backgroundColor = .systemBackground
 
         setupStackView()
-        setupTableViewButton()
-        setupCollectionViewButton()
-        setupCounterViewButton()
-        setupRandomEmojiViewButton()
+        setupButtons()
         setupConstraints()
     }
 
@@ -44,44 +37,20 @@ class MainView: UIView {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
 
-        stackView.addArrangedSubview(tableViewButton)
-        stackView.addArrangedSubview(collectionViewButton)
-        stackView.addArrangedSubview(counterViewButton)
-        stackView.addArrangedSubview(randomEmojiViewButton)
-
         addSubview(stackView)
     }
 
-    private func setupTableViewButton() {
-        tableViewButton.translatesAutoresizingMaskIntoConstraints = false
-        tableViewButton.setTitle("Random Strings", for: .normal)
-        tableViewButton.addAction(.init(handler: { [weak self] _ in
-            self?.buttonActions?(.tableViewButtonTapped)
-        }), for: .touchUpInside)
-    }
+    private func setupButtons() {
+        Action.allCases.forEach { action in
+            let button = UIButton(type: .system)
+            button.translatesAutoresizingMaskIntoConstraints = false
+            button.setTitle(action.title, for: .normal)
+            button.addAction(.init(handler: { [weak self] _ in
+                self?.buttonActions?(action)
+            }), for: .touchUpInside)
 
-    private func setupCollectionViewButton() {
-        collectionViewButton.translatesAutoresizingMaskIntoConstraints = false
-        collectionViewButton.setTitle("Numbers", for: .normal)
-        collectionViewButton.addAction(.init(handler: { [weak self] _ in
-            self?.buttonActions?(.collectionViewButtonTapped)
-        }), for: .touchUpInside)
-    }
-
-    private func setupCounterViewButton() {
-        counterViewButton.translatesAutoresizingMaskIntoConstraints = false
-        counterViewButton.setTitle("Counter", for: .normal)
-        counterViewButton.addAction(.init(handler: { [weak self] _ in
-            self?.buttonActions?(.counterViewButtonTapped)
-        }), for: .touchUpInside)
-    }
-
-    private func setupRandomEmojiViewButton() {
-        randomEmojiViewButton.translatesAutoresizingMaskIntoConstraints = false
-        randomEmojiViewButton.setTitle("Random Emoji", for: .normal)
-        randomEmojiViewButton.addAction(.init(handler: { [weak self] _ in
-            self?.buttonActions?(.randomEmojiViewButtonTapped)
-        }), for: .touchUpInside)
+            stackView.addArrangedSubview(button)
+        }
     }
 
     private func setupConstraints() {
@@ -93,10 +62,23 @@ class MainView: UIView {
 }
 
 extension MainView {
-    enum Action {
-        case tableViewButtonTapped
-        case collectionViewButtonTapped
-        case counterViewButtonTapped
-        case randomEmojiViewButtonTapped
+    enum Action: CaseIterable {
+        case randomStringsButtonTapped
+        case numbersButtonTapped
+        case counterButtonTapped
+        case randomEmojiButtonTapped
+
+        fileprivate var title: String {
+            switch self {
+            case .randomStringsButtonTapped:
+                return "Random Strings"
+            case .numbersButtonTapped:
+                return "Numbers"
+            case .counterButtonTapped:
+                return "Counter"
+            case .randomEmojiButtonTapped:
+                return "Random Emoji"
+            }
+        }
     }
 }
