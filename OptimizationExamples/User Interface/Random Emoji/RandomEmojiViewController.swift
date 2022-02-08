@@ -35,6 +35,12 @@ class RandomEmojiViewController: UIViewController {
         randomEmojiGenerator.delegate = self
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        randomEmojiGenerator.generateRandomEmoji()
+    }
+
     // MARK: - Private Methods
 
     private func generateRandomEmojiButtonTapped() {

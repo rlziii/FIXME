@@ -4,8 +4,8 @@ class RandomEmojiView: UIView {
     // MARK: - Private Properties
 
     private let stackView = UIStackView(frame: .zero)
-    private let generateRandomEmojiButton = UIButton(type: .system)
     private let emojiLabel = UILabel(frame: .zero)
+    private let generateRandomEmojiButton = UIButton(type: .system)
 
     private var buttonActions: ((Action) -> Void)?
 
@@ -35,8 +35,8 @@ class RandomEmojiView: UIView {
         backgroundColor = .systemBackground
 
         setupStackView()
-        setupGenerateRandomEmojiButton()
         setupEmojiLabel()
+        setupGenerateRandomEmojiButton()
         setupConstraints()
     }
 
@@ -44,10 +44,17 @@ class RandomEmojiView: UIView {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
 
-        stackView.addArrangedSubview(generateRandomEmojiButton)
         stackView.addArrangedSubview(emojiLabel)
+        stackView.addArrangedSubview(generateRandomEmojiButton)
 
         addSubview(stackView)
+    }
+
+    private func setupEmojiLabel() {
+        emojiLabel.translatesAutoresizingMaskIntoConstraints = false
+        emojiLabel.text = " "
+        emojiLabel.font = .preferredFont(forTextStyle: .largeTitle)
+        emojiLabel.textAlignment = .center
     }
 
     private func setupGenerateRandomEmojiButton() {
@@ -56,13 +63,6 @@ class RandomEmojiView: UIView {
         generateRandomEmojiButton.addAction(.init(handler: { [weak self] _ in
             self?.buttonActions?(.generateRandomEmojiButtonTapped)
         }), for: .touchUpInside)
-    }
-
-    private func setupEmojiLabel() {
-        emojiLabel.translatesAutoresizingMaskIntoConstraints = false
-        emojiLabel.text = " "
-        emojiLabel.font = .preferredFont(forTextStyle: .largeTitle)
-        emojiLabel.textAlignment = .center
     }
 
     private func setupConstraints() {
