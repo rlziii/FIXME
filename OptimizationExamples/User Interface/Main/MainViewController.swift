@@ -6,6 +6,14 @@ class MainViewController: UIViewController {
     private lazy var mainView = MainView(frame: .zero)
     private let counter = Counter()
 
+    // MARK: - Initialization
+
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) { fatalError() }
+
     // MARK: - UIViewController Methods
 
     override func loadView() {
@@ -17,14 +25,16 @@ class MainViewController: UIViewController {
 
         title = "Optimization Examples"
 
-        mainView.setupButtonActions { [weak self] action in
+        mainView.setupButtonActions { [unowned self] action in
             switch action {
             case .tableViewButtonTapped:
-                self?.tableViewButtonTapped()
+                tableViewButtonTapped()
             case .collectionViewButtonTapped:
-                self?.collectionViewButtonTapped()
+                collectionViewButtonTapped()
             case .counterViewButtonTapped:
-                self?.counterViewButtonTapped()
+                counterViewButtonTapped()
+            case .randomEmojiViewButtonTapped:
+                randomEmojiViewButtonTapped()
             }
         }
     }
@@ -41,5 +51,9 @@ class MainViewController: UIViewController {
 
     private func counterViewButtonTapped() {
         show(CounterViewController(counter: counter), sender: self)
+    }
+
+    private func randomEmojiViewButtonTapped() {
+        show(RandomEmojiViewController(), sender: self)
     }
 }

@@ -12,6 +12,8 @@
 		80CA732127B1D3C300344B95 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CA732027B1D3C300344B95 /* CounterView.swift */; };
 		80CA732327B1D56B00344B95 /* RandomStringsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CA732227B1D56B00344B95 /* RandomStringsTableViewCell.swift */; };
 		80CA732527B1D73C00344B95 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CA732427B1D73C00344B95 /* Counter.swift */; };
+		80CA732827B20A6500344B95 /* RandomEmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CA732727B20A6500344B95 /* RandomEmojiViewController.swift */; };
+		80CA732A27B20ACA00344B95 /* RandomEmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CA732927B20ACA00344B95 /* RandomEmojiView.swift */; };
 		80F8E124270E309A00186636 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8E123270E309A00186636 /* AppDelegate.swift */; };
 		80F8E126270E309A00186636 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8E125270E309A00186636 /* SceneDelegate.swift */; };
 		80F8E128270E309A00186636 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8E127270E309A00186636 /* MainViewController.swift */; };
@@ -21,6 +23,8 @@
 		80F8E142270E3E6700186636 /* NumbersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8E141270E3E6700186636 /* NumbersCollectionViewController.swift */; };
 		80F8E144270E421700186636 /* NumbersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8E143270E421700186636 /* NumbersCollectionViewCell.swift */; };
 		80F8E146270E677A00186636 /* NumbersCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F8E145270E677A00186636 /* NumbersCollectionViewHeader.swift */; };
+		80FCD28127B21A7100FCA471 /* RandomEmojiGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FCD28027B21A7100FCA471 /* RandomEmojiGenerator.swift */; };
+		80FCD28327B21A8400FCA471 /* RandomNumberDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FCD28227B21A8400FCA471 /* RandomNumberDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,8 @@
 		80CA732027B1D3C300344B95 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		80CA732227B1D56B00344B95 /* RandomStringsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomStringsTableViewCell.swift; sourceTree = "<group>"; };
 		80CA732427B1D73C00344B95 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		80CA732727B20A6500344B95 /* RandomEmojiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomEmojiViewController.swift; sourceTree = "<group>"; };
+		80CA732927B20ACA00344B95 /* RandomEmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomEmojiView.swift; sourceTree = "<group>"; };
 		80F8E120270E309A00186636 /* OptimizationExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptimizationExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F8E123270E309A00186636 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80F8E125270E309A00186636 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +46,8 @@
 		80F8E141270E3E6700186636 /* NumbersCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersCollectionViewController.swift; sourceTree = "<group>"; };
 		80F8E143270E421700186636 /* NumbersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersCollectionViewCell.swift; sourceTree = "<group>"; };
 		80F8E145270E677A00186636 /* NumbersCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersCollectionViewHeader.swift; sourceTree = "<group>"; };
+		80FCD28027B21A7100FCA471 /* RandomEmojiGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomEmojiGenerator.swift; sourceTree = "<group>"; };
+		80FCD28227B21A8400FCA471 /* RandomNumberDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumberDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,17 @@
 				80CA731E27B1D3B800344B95 /* CounterViewController.swift */,
 			);
 			path = Counter;
+			sourceTree = "<group>";
+		};
+		80CA732627B20A5800344B95 /* Random Emoji */ = {
+			isa = PBXGroup;
+			children = (
+				80FCD28227B21A8400FCA471 /* RandomNumberDelegate.swift */,
+				80FCD28027B21A7100FCA471 /* RandomEmojiGenerator.swift */,
+				80CA732927B20ACA00344B95 /* RandomEmojiView.swift */,
+				80CA732727B20A6500344B95 /* RandomEmojiViewController.swift */,
+			);
+			path = "Random Emoji";
 			sourceTree = "<group>";
 		};
 		80F8E117270E309A00186636 = {
@@ -105,6 +124,7 @@
 				80CA731C27B1D39B00344B95 /* Counter */,
 				80F8E13C270E38A500186636 /* Main */,
 				80F8E140270E3E5000186636 /* Numbers */,
+				80CA732627B20A5800344B95 /* Random Emoji */,
 				80F8E139270E31FD00186636 /* Random Strings */,
 			);
 			path = "User Interface";
@@ -215,8 +235,12 @@
 				80F8E144270E421700186636 /* NumbersCollectionViewCell.swift in Sources */,
 				80F8E128270E309A00186636 /* MainViewController.swift in Sources */,
 				80F8E13E270E3B5600186636 /* RandomStringsGenerator.swift in Sources */,
+				80CA732A27B20ACA00344B95 /* RandomEmojiView.swift in Sources */,
+				80FCD28127B21A7100FCA471 /* RandomEmojiGenerator.swift in Sources */,
 				80CA731F27B1D3B800344B95 /* CounterViewController.swift in Sources */,
+				80CA732827B20A6500344B95 /* RandomEmojiViewController.swift in Sources */,
 				80CA732127B1D3C300344B95 /* CounterView.swift in Sources */,
+				80FCD28327B21A8400FCA471 /* RandomNumberDelegate.swift in Sources */,
 				80F8E124270E309A00186636 /* AppDelegate.swift in Sources */,
 				80F8E146270E677A00186636 /* NumbersCollectionViewHeader.swift in Sources */,
 				80F8E126270E309A00186636 /* SceneDelegate.swift in Sources */,

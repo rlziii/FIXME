@@ -5,6 +5,14 @@ class RandomStringsTableViewController: UITableViewController {
 
     private let randomStrings = RandomStringsGenerator.generate(count: 10_000)
 
+    // MARK: - Initialization
+
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) { fatalError() }
+
     // MARK: - UIViewController Methods
 
     override func viewDidLoad() {
