@@ -14,6 +14,7 @@ class NumbersCollectionViewController: UICollectionViewController {
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) { fatalError() }
 
     // MARK: - UIViewController Methods

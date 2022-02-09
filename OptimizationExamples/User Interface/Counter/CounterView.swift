@@ -18,6 +18,7 @@ class CounterView: UIView {
         setupViews()
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) { fatalError() }
 
     // MARK: - Public Methods

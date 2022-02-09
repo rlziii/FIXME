@@ -17,6 +17,7 @@ class RandomStringsTableViewCell: UITableViewCell {
         setupViews()
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) { fatalError() }
 
     // MARK: - Public Methods
