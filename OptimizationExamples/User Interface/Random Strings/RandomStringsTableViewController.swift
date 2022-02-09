@@ -8,7 +8,7 @@ class RandomStringsTableViewController: UITableViewController {
     // MARK: - Initialization
 
     init() {
-        super.init(nibName: nil, bundle: nil)
+        super.init(style: .plain)
     }
 
     @available(*, unavailable)
