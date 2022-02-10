@@ -24,7 +24,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Optimization Examples"
+        title = "FIXME"
 
         mainView.setupButtonActions { [unowned self] action in
             switch action {
